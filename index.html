@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 1 - Landing Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="Adler__2_-removebg-preview.png"
+        alt="logo"
+      />
+      <i class="fa-solid fa-bars" id="menu"></i>
+      <ul class="nav">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#more">More</a></li>
+      </ul>
+    </header>
+    <section class="hero" id="hero">
+      <img src="9d05f810-5ba7-4533-809a-eb1e9b6b48a0.jpg" alt="hero-img" />
+      <div class="hero-content">
+        <h1>Transforming innovative ideas</h1>
+        <h2>
+          into seamless digital experiences, one line of code at a time—where
+          imagination and technology converge.
+        </h2>
+        <a href="#about"><button>Get Started</button></a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-container">
+        <div class="about-title">
+          <h1>ABOUT</h1>
+          <h1>Web Development</h1>
+          <h3>
+            Web development is the process of creating, building, and
+            maintaining websites and web applications that are accessed through
+            the internet. It involves a combination of programming, design, and
+            technical skills to develop websites that are functional,
+            user-friendly, and visually appealing.
+          </h3>
+          <h1>IMPORTANCE</h1>
+        </div>
+        <div class="importance-container">
+          <div class="imp-box">
+            <h1>Global Accessibility and Reach</h1>
+            <p>
+              Web development enables businesses, organizations, and individuals
+              to reach a global audience. A well-designed website makes it
+              possible for anyone with internet access to discover, interact
+              with, and engage with your content, services, or products from
+              anywhere in the world, 24/7.
+            </p>
+          </div>
+          <div class="imp-box">
+            <h1>Enhanced User Experience and Engagement</h1>
+            <p>
+              Through effective web development, websites can be designed to be
+              user-friendly, responsive, and visually appealing. This enhances
+              the user experience, encouraging visitors to stay longer, explore
+              more content, and return in the future. A seamless and enjoyable
+              online experience can lead to higher engagement, customer
+              satisfaction, and conversions.
+            </p>
+          </div>
+          <div class="imp-box">
+            <h1>Business Growth and Credibility</h1>
+            <p>
+              A professionally developed website can significantly contribute to
+              business growth by attracting new customers, generating leads, and
+              increasing sales. Additionally, a well-maintained website enhances
+              a company's credibility and trustworthiness, making it a crucial
+              tool for establishing a strong online presence and brand identity.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="more" id="more">
+        <div class="socials">
+          <a href="https://www.facebook.com/hellojeanna" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/adlerr.a/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/adler-a" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="more-box">
+          <h1>Want to learn more?</h1>
+          <h2>
+            Let's connect and bring your vision to life ✨. We’re open to
+            discussion, ready to push the limits of web development and deliver
+            outstanding results.
+          </h2>
+          <button>Let's talk</button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; Copyright @Adler. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      let menuicon = document.querySelector("#menu");
+      let navigation = document.querySelector(".nav");
+
+      menuicon.onclick = () => {
+        menuicon.classList.toggle("fa-xmark");
+        navigation.classList.toggle("active");
+      };
+
+      ScrollReveal({
+        distance: "80px",
+        duration: 2000,
+        delay: 200,
+      });
+
+      ScrollReveal().reveal(".hero h1, header", {
+        origin: "top",
+      });
+      ScrollReveal().reveal(" .hero h2, .hero button, footer", {
+        origin: "bottom",
+      });
+      ScrollReveal().reveal(".about-title, .socials", {
+        origin: "left",
+      });
+      ScrollReveal().reveal(".importance-container, .more-box", {
+        origin: "right",
+      });
+    </script>
+  </body>
+</html>
